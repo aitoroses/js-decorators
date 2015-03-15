@@ -1,3 +1,18 @@
+# JS Decorators
+
+A tiny compiler that brings python style decorators to javascript.
+
+## Use
+
+js```
+import Compiler from '../lib/compiler';
+
+var result = compiler.compile(source);
+```
+
+## Example
+
+js```
 function addAnnotation(decorable, annotation) {
   decorable.annotations = decorable.annotations || [];
   decorable.annotations.push(annotation);
@@ -22,3 +37,21 @@ export function Decorator2(config, decorable) {
   decorable = addAnnotation(decorable, new Annotation2(config))
   return decorable;
 }
+```
+
+js```
+
+// index.js
+
+import {Decorator1, Decorator2} from './decorators';
+
+@Decorator1
+@Decorator2({module: "MY_MODULE"})
+class MyClass {
+  constructor() {
+    console.log("Instantiate my class");
+  }
+}
+
+MyClass.annotations[0].name == Annotation2 // => true
+```

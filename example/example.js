@@ -1,7 +1,7 @@
 import {Decorator1, Decorator2} from './decorators';
 
 @Decorator1
-@Decorator2({module: "EAPP"})
+@Decorator2({module: "MY_MODULE"})
 class MyClass {
   constructor() {
     console.log("Instantiate my class");
