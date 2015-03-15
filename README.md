@@ -4,7 +4,7 @@ A tiny compiler that brings python style decorators to javascript.
 
 ## Use
 
-js```
+```js
 import Compiler from '../lib/compiler';
 
 var result = compiler.compile(source);
@@ -12,7 +12,7 @@ var result = compiler.compile(source);
 
 ## Example
 
-js```
+```js
 function addAnnotation(decorable, annotation) {
   decorable.annotations = decorable.annotations || [];
   decorable.annotations.push(annotation);
@@ -39,7 +39,7 @@ export function Decorator2(config, decorable) {
 }
 ```
 
-js```
+```js
 
 // index.js
 
