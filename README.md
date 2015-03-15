@@ -15,7 +15,6 @@ var result = compiler.compile(source);
 ## Example
 
 ```js
-
 // decorators.js
 
 function addAnnotation(decorable, annotation) {
@@ -45,7 +44,6 @@ export function Decorator2(config, decorable) {
 ```
 
 ```js
-
 // index.js
 
 import {Decorator1, Decorator2} from './decorators';
