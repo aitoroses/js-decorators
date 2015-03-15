@@ -7,12 +7,17 @@ A tiny compiler that brings python style decorators to javascript.
 ```js
 import Compiler from '../lib/compiler';
 
+var compiler = new Compiler();
+
 var result = compiler.compile(source);
 ```
 
 ## Example
 
 ```js
+
+// decorators.js
+
 function addAnnotation(decorable, annotation) {
   decorable.annotations = decorable.annotations || [];
   decorable.annotations.push(annotation);
