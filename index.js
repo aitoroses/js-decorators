@@ -1,14 +1,12 @@
 import fs from 'fs';
 import path from 'path';
-import {Lexer} from './lib/lexer';
-import {Parser} from './lib/parser';
+import {Compiler} from './lib/compiler';
 
 // Arguments
 var args = require('optimist').argv
 
-// Lexer and Parser
-var lexer = new Lexer();
-var parser = new Parser();
+// Instantiate compiler
+var compiler = new Compiler();
 
 // Read the file
 try {
@@ -23,4 +21,4 @@ try {
 }
 
 // Lex the file
-console.log(lexer.lex(file));
+console.log(compiler.compile(file));
